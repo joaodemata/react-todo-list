@@ -1,6 +1,12 @@
 ### Change log del curso 
 
-### 0.0.2 (joaodemata)
+### 0.1.3 (joaodemata)
+
+## Added
+
+- estilos de css y condiciones dinamicas para pintar 
+
+### 0.1.2 (joaodemata)
 
 ## Added
 
@@ -8,7 +14,7 @@
 - Mapeo de componentes y utilizar las propiedades para pintar de manera dinámica
 
 
-### 0.0.1 (joaodemata)
+### 0.1.1 (joaodemata)
 
 ## Added
 
