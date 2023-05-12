@@ -22,14 +22,38 @@ function App() {
   const completedTodos = todos.filter((_todos) => _todos.completed).length;
   const totalTodos = todos.length;
 
+  const searchTodos = todos.filter((_todo) => {
+    return String(_todo.text).toLowerCase().includes(String(searchValue).toLowerCase());
+  });
+
+  const completeTodo = (_text) => {
+    const newTodos = [...todos];
+
+    const todoIndex = newTodos.findIndex((_todo) => _todo.text == _text);
+
+    newTodos[todoIndex].completed = true;
+
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (_text) => {
+    const newTodos = [...todos];
+
+    const todoIndex = newTodos.findIndex((_todo) => _todo.text == _text);
+
+    newTodos.splice(todoIndex, 1);
+
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
-        {defaultTODOS.map((_todo) => (
-          <TodoItem key={_todo.text} text={_todo.text} completed={_todo.completed} />
+        {searchTodos.map((_todo) => (
+          <TodoItem key={_todo.text} text={_todo.text} completed={_todo.completed} onComplete={() => completeTodo(_todo.text)} onDelete={() => deleteTodo(_todo.text)} />
         ))}
       </TodoList>
 

@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.1.5 (joaodemata)
+
+## Added
+
+- Agregar mensaje dinamico dependiendo de la cantidad de tareas completadas, realizar las acciones de eliminar y completar TODO y ajuste en el eslintrc
+
 ### 0.1.4 (joaodemata)
 
 ## Added
