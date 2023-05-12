@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.1.6 (joaodemata)
+
+## Added
+
+- Iconos y los flujos con estos
+
 ### 0.1.5 (joaodemata)
 
 ## Added
