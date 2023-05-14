@@ -1,5 +1,15 @@
 ### Change log del curso
 
+### 0.2.6 (joaodemata)
+
+## Added
+
+- utilizar useEffect para los llamados del localStorage
+
+## Changed
+
+- Cambiar estructura de los archivos y organizarlos
+
 ### 0.1.6 (joaodemata)
 
 ## Added

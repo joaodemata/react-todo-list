@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoIcon } from './TodoIcon';
+import { TodoIcon } from './';
 
 function DeleteIcon({ onDelete }) {
   //TODO: esta vaina le hace falta los parentesis
