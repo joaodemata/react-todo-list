@@ -34,3 +34,16 @@ function useLocalStorage(_itemName, _initialValue) {
 }
 
 export { useLocalStorage };
+
+// const defaultTODOS = [
+//   { text: 'primera tarea', completed: true },
+//   { text: 'segunda tarea', completed: false },
+//   { text: 'tercera tarea', completed: true },
+//   { text: 'cuarta tarea', completed: true },
+//   { text: 'quinta tarea', completed: true },
+//   { text: 'sexta tarea', completed: true },
+// ];
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTODOS));
+// localStorage.getItem()
+// localStorage.removeItem()

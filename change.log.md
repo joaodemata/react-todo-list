@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.2.7 (joaodemata)
+
+## Added
+
+- Utilizar createContext y hacer spinner de carga
+
 ### 0.2.6 (joaodemata)
 
 ## Added

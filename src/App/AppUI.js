@@ -2,19 +2,27 @@ import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
-import { CreateTodoButton } from '../CreateTodoButton';
+import { TodosLoading } from '../TodosLoading';
+import { TodosError } from '../TodosError';
+import { EmptyTodos } from '../EmptyTodos';
 
-function AppUI({ loading, error, completedTodos, totalTodos, searchValue, setSearchValue, completeTodo, deleteTodo, searchTodos }) {
+import { CreateTodoButton } from '../CreateTodoButton';
+import { TodoContext } from '../TodoContext';
+import React from 'react';
+
+function AppUI() {
+  const { loading, error, searchValue, completeTodo, deleteTodo, searchTodos } = React.useContext(TodoContext);
+
   return (
     <>
-      <TodoCounter completed={completedTodos} total={totalTodos} />
-      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      <TodoCounter />
+      <TodoSearch />
 
       <TodoList>
-        {loading && <p>Estamos cargando...</p>}
-        {error && <p>Hubo un error!!</p>}
-        {!loading && searchValue && searchTodos.length == 0 && <p>!No se encuentra ningún Todo con esa descripción!</p>}
-        {!loading && !searchValue && searchTodos.length == 0 && <p>!Crea tu primer Todo!</p>}
+        {loading && <TodosLoading />}
+        {error && <TodosError />}
+        {!loading && searchValue && searchTodos.length == 0 && <EmptyTodos />}
+        {!loading && !searchValue && searchTodos.length == 0 && <EmptyTodos />}
 
         {searchTodos.map((_todo) => (
           <TodoItem key={_todo.text} text={_todo.text} completed={_todo.completed} onComplete={() => completeTodo(_todo.text)} onDelete={() => deleteTodo(_todo.text)} />
