@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.2.8 (joaodemata)
+
+## Added
+
+- Terminar la aplicacion con modales mejorar css del crea tu primer todo
+
 ### 0.2.7 (joaodemata)
 
 ## Added
