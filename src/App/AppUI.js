@@ -7,11 +7,15 @@ import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 
 import { CreateTodoButton } from '../CreateTodoButton';
+import { TodoForm } from '../TodoForm';
+
+import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
+
 import React from 'react';
 
 function AppUI() {
-  const { loading, error, searchValue, completeTodo, deleteTodo, searchTodos } = React.useContext(TodoContext);
+  const { loading, error, searchValue, completeTodo, deleteTodo, searchTodos, openModal } = React.useContext(TodoContext);
 
   return (
     <>
@@ -30,6 +34,11 @@ function AppUI() {
       </TodoList>
 
       <CreateTodoButton />
+      {openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
     </>
   );
 }
