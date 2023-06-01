@@ -13,14 +13,14 @@ Give it a try!! access to: https://joaodemata.github.io/react-todo-list/
 
 Spanish
 
-Este proyecto consiste en una listado de tareas donde puedes realizar las siguiente acciones:
+Este proyecto consiste en un listado de tareas donde puedes realizar las siguiente acciones:
 
 - Agregar tareas
 - Completar tareas
 - Eliminar tareas
 - Buscar tareas
 
-Bonus: La aplicación te mostrará mensajes especiales cuando: Completes todas tus tareas o no tengas ninguna tarea (ya sea porque no hay o porque la busqueda no consiguio ninguna tarea)
+Bonus: La aplicación te mostrará mensajes especiales cuando, completes todas tus tareas o no tengas ninguna tarea (ya sea porque no hay o porque la busqueda no consiguio ninguna tarea)
 
 Echale un ojo!! accede a: https://joaodemata.github.io/react-todo-list/
 
