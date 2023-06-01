@@ -1,12 +1,28 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# Todo list con React.js
 
-¡Hola, Platzinauta!
+This project consist a todo list where you can:
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+- Add tasks
+- Complete tasks
+- Delete taks
+- search tasks
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+Bonus: The app has special messages when you complete all your tasks or no tasks had been added
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+Give it a try!! access to: https://joaodemata.github.io/react-todo-list/
+
+Spanish
+
+Este proyecto consiste en una listado de tareas donde puedes realizar las siguiente acciones:
+
+- Agregar tareas
+- Completar tareas
+- Eliminar tareas
+- Buscar tareas
+
+Bonus: La aplicación te mostrará mensajes especiales cuando: Completes todas tus tareas o no tengas ninguna tarea (ya sea porque no hay o porque la busqueda no consiguio ninguna tarea)
+
+Echale un ojo!! accede a: https://joaodemata.github.io/react-todo-list/
 
 ## Getting Started with Create React App
 
@@ -19,7 +35,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000 [or the next port available]) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -49,27 +65,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
