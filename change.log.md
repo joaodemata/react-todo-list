@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.2.9 (joaodemata)
+
+## Added
+
+- Mejoras utilizando reducers y patrones de render como composicion
+
 ### 0.2.8 (joaodemata)
 
 ## Added

@@ -1,38 +1,47 @@
-import './TodoForm.css';
 import React from 'react';
-import { TodoContext } from '../TodoContext';
+import './TodoForm.css';
 
-function TodoForm() {
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
+function TodoForm({
+  addTodo,
+  setOpenModal,
+} ) {
+  const [newTodoValue, setNewTodoValue] = React.useState('');
 
-  const [newTodoValue, setNewTodoValuve] = React.useState('');
-
-  const onSubmit = (_event) => {
-    _event.preventDefault(); // Necesario para que no se recargue
-    addTodo(newTodoValue);
-    setOpenModal(false);
+  
+  const onChange = (event) => {
+    setNewTodoValue(event.target.value);
   };
-
   const onCancel = () => {
     setOpenModal(false);
   };
-
-  const onChange = (_event) => {
-    setNewTodoValuve(_event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    addTodo(newTodoValue);
+    setOpenModal(false);
   };
 
   return (
     <form onSubmit={onSubmit}>
       <label>Escribe tu nuevo TODO</label>
-      <textarea placeholder="Realizar la aplicacion para la uni" value={newTodoValue} onChange={onChange} />
+      <textarea
+        value={newTodoValue}
+        onChange={onChange}
+        placeholder="Cortar la cebolla oara el almuerzo"
+      />
       <div className="TodoForm-buttonContainer">
-        <button type="button" className="TodoForm-button TodoForm-button--cancel" onClick={onCancel}>
+        <button
+          type="button"
+          className="TodoForm-button TodoForm-button--cancel"
+          onClick={onCancel}
+        >
           Cancelar
         </button>
-        <button type="submit" className="TodoForm-button TodoForm-button--add">
+        <button
+          type="submit"
+          className="TodoForm-button TodoForm-button--add"
+        >
           Añadir
         </button>
-        {/* Este es de tipo submit por defecto, por eso se ejectua el envento en el form */}
       </div>
     </form>
   );
