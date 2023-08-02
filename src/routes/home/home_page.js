@@ -33,22 +33,16 @@ function HomePage() {
     // addTodo,
     completeTodo,
     deleteTodo,
-    setSearchValue,
+    searchTodos,
     sincronizeTodos,
-    editTodo
+    editTodo,
   } = stateUpdaters;
-  
+
   return (
     <React.Fragment>
       <TodoHeader loading={loading}>
-        <TodoCounter
-          totalTodos={totalTodos}
-          completedTodos={completedTodos}
-        />
-        <TodoSearch
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        />
+        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+        <TodoSearch searchValue={searchValue} searchTodos={searchTodos} />
       </TodoHeader>
 
       <TodoList
@@ -60,20 +54,9 @@ function HomePage() {
         onError={() => <TodosError />}
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
-        onEmptySearchResults={
-          (searchText) => <p>No hay resultados para {searchText}</p>
-        }
+        onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
       >
-        {todo => (
-          <TodoItem
-            key={todo.id}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.id)}
-            onDelete={() => deleteTodo(todo.id)}
-            onEdit={() => navigate(`/edit/${todo.id}`, { state: { todo: todo } })}
-          />
-        )}
+        {(todo) => <TodoItem key={todo.id} text={todo.text} completed={todo.completed} onComplete={() => completeTodo(todo.id)} onDelete={() => deleteTodo(todo.id)} onEdit={() => navigate(`/edit/${todo.id}`, { state: { todo: todo } })} />}
       </TodoList>
 
       {/* {!!openModal && (
@@ -86,13 +69,11 @@ function HomePage() {
       )} */}
 
       <CreateTodoButton
-        onClick = {()=> navigate('/new')}
+        onClick={() => navigate('/new')}
         // setOpenModal={setOpenModal}
       />
 
-      <ChangeAlert
-        sincronize={sincronizeTodos}
-      />
+      <ChangeAlert sincronize={sincronizeTodos} />
     </React.Fragment>
   );
 }
