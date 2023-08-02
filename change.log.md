@@ -1,5 +1,11 @@
 ### Change log del curso
 
+### 0.3.8 (joaodemata)
+
+## Added
+
+- Utilizar react-router-dom V6
+
 ### 0.2.8 (joaodemata)
 
 ## Added
